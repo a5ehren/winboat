@@ -73,6 +73,7 @@ You can download the latest Linux builds under the [Releases](https://github.com
 - **Unpacked:** The raw unpacked files, simply run the executable (`linux-unpacked/winboat`)
 - **.deb:** The intended format for Debian based distributions
 - **.rpm:** The intended format for Fedora based distributions
+- **.flatpak:** Another portable format
 - **Nix (Nixpkgs)**
     1. Add the winboat package to your config (ensure using nixpkgs-unstable)
     using `environment.systemPackages = [pkgs.winboat];` or `home.packages = [pkgs.winboat];` if using home manager.
@@ -94,6 +95,13 @@ You can download the latest Linux builds under the [Releases](https://github.com
 - Build the app and the guest server using `bun run build:linux-gs`
 - You can now find the built app under `dist` with an AppImage and an Unpacked variant
 
+## Building WinBoat Flatpak
+
+- For building the flatpak you need to have Bun and Docker installed on your system
+- Clone the repo (`git clone https://github.com/TibixDev/WinBoat`)
+- Build the flatpak with (`bun run build:flatpak`)
+- You can now find the built app at `build/winboat.flatpak`
+
 ## Running WinBoat in development mode
 
 - Make sure you meet the [prerequisites](#prerequisites)
@@ -101,7 +109,7 @@ You can download the latest Linux builds under the [Releases](https://github.com
 - Clone the repo (`git clone https://github.com/TibixDev/WinBoat`)
 - Install the dependencies (`bun i`)
 - Build the guest server (`bun run build:gs`)
-- Run the app (`bun run dev`)
+- Run the app (`bun run ./scripts/dev-server.ts`)
 
 ## Contributing
 

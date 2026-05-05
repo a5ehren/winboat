@@ -21,10 +21,14 @@ export class FreeRDPInstallation {
     }
 }
 
+/**
+ * List of FreeRDP installations to check for, in order of preference
+ * The flatpak is checked first because it is most likely to be up to date.
+ */
 const freeRDPInstallations = [
+    new FreeRDPInstallation("flatpak", ["run", "--command=xfreerdp", "com.freerdp.FreeRDP"]),
     new FreeRDPInstallation("xfreerdp3"),
     new FreeRDPInstallation("xfreerdp"),
-    new FreeRDPInstallation("flatpak", ["run", "--command=xfreerdp", "com.freerdp.FreeRDP"]),
 ];
 
 /**

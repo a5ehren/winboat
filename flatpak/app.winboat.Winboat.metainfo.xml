@@ -12,6 +12,10 @@
     <category>Utility</category>
   </categories>
 
+  <requires>
+    <id>com.freerdp.FreeRDP</id>
+  </requires>
+
   <name>WinBoat</name>
   <summary>Run Windows apps on Linux with seamless integration</summary>
   <description>

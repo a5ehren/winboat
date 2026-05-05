@@ -7,7 +7,10 @@ build
 
 result
 
+# transient files during flatpak build
 package-lock.json
+yarn.lock
+
 # src/renderer/public/*
 
 # Custom
